@@ -42,6 +42,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         else {
             $error = "Error creating account.";
         }
+    $x = array(SELECT * From University);
+    
 
 
     // Close connection
