@@ -26,24 +26,5 @@ function clearInputError(inputElement) {
     inputElement.parentElement.querySelector(".form__input-error-message").textContent = "";
 }
 
-function validateForm() {
-    var x = document.forms["myForm"]["UniName"].value;
-    if (x == "") {
-      alert("Please fill out all the fields");
-      return false;
-    }
-}
 
-function validate(userId) {
-    var userId = document.getElementById("user-id").value;
-    var pattern = /^[0-9]+$/;
-    
-    if (pattern.test(userId)) {
-      // user ID is only numbers
-      // do something here
-    } else {
-      // user ID contains non-numeric characters
-      document.getElementById("error-msg").innerHTML = "Error: User ID must only contain numbers.";
-    }
-  }
 
