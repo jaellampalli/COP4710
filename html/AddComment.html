@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Adding Comment</title>
+    <!-- <link rel="stylesheet" href="main.css"> -->
+  </head>
+  <body style= "color: white;">
+    <style>
+
+   body {
+      background-image: url('https://media4.giphy.com/media/TxVVB6PfWMjE4/giphy.gif?cid=ecf05e47f78vl3qpxyemkuuuc5zbw34iebfrk00y2nnw3xmd&amp;rid=giphy.gif&amp;ct=g');
+    }
+    </style>
+
+
+
+<div id = "div1">
+
+<form action = "addcomment.php" method = "POST"></form>
+<!-- display error message when clicked on submit with blank inputs -->
+<head>
+  <script>
+    function validateForm() {
+      var x = document.forms["myForm"]["Comment"].value;
+      if (x == "") {
+        alert("Please fill out all the fields");
+        return false;
+      }
+    }
+  </script>
+</head>
+
+    
+
+<form name="myForm" class="form form form--hidden" onsubmit="return validateForm()" id="AddComment" method="post">
+    <h1 class="form__title" style = "font-family:Cursive" id="AddComment">Add Comment</h1>
+    <div class="form__message form__message--error"></div>
+
+    <div class="form__input-group">
+        <label for="comment">Event Id:</label>
+        <input type="text" id="EventId" class="form__input" autofocus placeholder="EventId" style = "font-family:Cursive"><br><br>
+        <div class="form__input-error-message"></div>
+    </div>
+
+    <div class="form__input-group">
+        <label for="comment">We appreciate your input:</label><br>
+        <textarea id="Comment" rows ="4" cols="50" class="form__input" autofocus placeholder="Leave in a detailed text description" style = "font-family:Cursive"></textarea><br>
+        <div class="form__input-error-message"></div>
+    </div>
+    <br>
+    <div class="form__input-group">
+        <label for="rating">Rate in your experience:</label><br>
+           <select id="rating" name="rating" style = "font-family:Cursive">
+            <option value="5">5</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1</option>
+          </select>
+           <div class="form__input-error-message"></div>
+       </div>
+       <br>
+
+       <button class="form__button" type="submit" style = "font-family:Cursive">ADD</button>
+</form>
+</div>
+</body>
+
+
+</html>
