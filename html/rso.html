@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Events</title>
+        <link rel="stylesheet" href="main.css">
+
+        <script>
+            // Retrieve the session variable that stores the username
+            var username = '<?php echo $_SESSION["username"]; ?>';
+            // Display the username in the top left corner of the page
+            window.onload = function() {
+                var usernameElement = document.getElementById("username");
+                usernameElement.innerHTML = username;
+            }
+        </script>
+
+    </head>
+    <body style= "color: #4A235A;">
+        <style>
+
+            #backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+            }
+            body {
+              background-image: url('https://media4.giphy.com/media/TxVVB6PfWMjE4/giphy.gif?cid=ecf05e47f78vl3qpxyemkuuuc5zbw34iebfrk00y2nnw3xmd&amp;rid=giphy.gif&amp;ct=g');
+                
+             
+            }
+            </style>
+
+            <div class="container">
+
+    
+                <form> 
+                  <h1 class="form__title" style="font-family:Cursive">List Of RSO groups</h1>
+                    <ul>
+          
+                      <li><a href="#/Career Fair" style="color: #4A235A;">Career Fair</a></li>
+
+
+                      <li><a href="#/Paintball" style="color: #4A235A;">PaintBall</a></li>
+
+                      <li><a href="#/Picnic" style="color: #4A235A">Welcome Back Picnic</a>
+                    
+                    </li>
+                      <li><a href="#/GiveAheart" style="color: #4A235A;">Give A Heart!</a></li>
+                      <br>
+          
+                     
+          
+                    
+                    <a href="joinRso.html" id="joinRsoGroup" style = "font-family:Cursive">Join RSO</a><br>
+
+
+                    <!-- <?php if ($_SESSION['Student_type'] === 'admin'): ?>
+                      <p class="form__text">
+                                <a href="AddRSOevent.html" oneclick= "return show('AddRSOevent.html')" style = "font-family:Cursive">Add RSO event</a>
+                                <a href="AddRSOgroup.html" oneclick= "return show('AddRSOgroup.html')" style = "font-family:Cursive">Add RSO group</a>
+                            </p>
+                      <?php endif; ?>\ -->
+                    
+                    <!-- <a href="AddComment.html" id="linkAddComment" style = "font-family:Cursive">Add Comment</a> -->
+                    <a href="AddRSOevent.html" id="AddRsoE" style = "font-family:Cursive">Add RSO event</a><br>
+
+                    <a href="AddRSOgroup.html" id="AddRsoG" style = "font-family:Cursive">Add RSO group</a>
+                    
+                  </ul>
+                </form>
+
+              </div>
+              <div id="menu-container">
+
+              </div>
+
+    </body>
+</html>
