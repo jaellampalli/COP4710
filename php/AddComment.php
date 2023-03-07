@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $result = mysqli_query($conn, $sql);
         if ($result) {
                  // Account created successfully, redirect to university page
-                 header('Location: AddComment.html');
+                 header('Location: comments.html');
                }
                else {
                  // Displays error message.
