@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $result = mysqli_query($conn, $sql);
         if ($result) {
                  // Account created successfully, redirect to university page
-                 header('Location: adduniversity.php');
+                 header('Location: universities.html');
                }
                else {
                  // Displays error message.
